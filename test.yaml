@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: ping all ansible nodes
+    ping: 
+-   name: install tree on ubuntu nodes
+    apt: 
+       name: tree
+       state: present
+       
